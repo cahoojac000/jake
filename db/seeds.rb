@@ -1,10 +1,19 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
+puts "3 Topic created"
+
 10.times do |blog|
   Blog.create!(
       title: "My blog post #{blog}",
-      body: 'Bacon ipsum dolor amet capicola ham rump ribeye corned beef bacon. T-bone cow ham jowl, burgdoggen kielbasa porchetta frankfurter fatback pork belly pork chop. Rump beef turducken tri-tip salami. Tri-tip pancetta short loin meatloaf, beef chicken shoulder pork belly meatball landjaeger fatback. Filet mignon flank landjaeger boudin meatball, pig rump beef. Jowl prosciutto shoulder, ball tip pork belly rump shankle pork chop boudin corned beef ground round beef tail biltong. Strip steak doner cupim ham ground round kevin drumstick flank.'
+      body: 'Bacon ipsum dolor amet capicola ham rump ribeye corned beef bacon. T-bone cow ham jowl, burgdoggen kielbasa porchetta frankfurter fatback pork belly pork chop. Rump beef turducken tri-tip salami. Tri-tip pancetta short loin meatloaf, beef chicken shoulder pork belly meatball landjaeger fatback. Filet mignon flank landjaeger boudin meatball, pig rump beef. Jowl prosciutto shoulder, ball tip pork belly rump shankle pork chop boudin corned beef ground round beef tail biltong. Strip steak doner cupim ham ground round kevin drumstick flank.',
+      topic_id: Topic.last.id
     )
 end
 puts '10 blog posts created'
+
 5.times do |skill|
   Skill.create!(
       title: "Rails #{skill}",
@@ -12,6 +21,7 @@ puts '10 blog posts created'
     )
 end
 puts '5 skills created'
+
 8.times do |portfolio_item|
     Portfolio.create!(
         title: "Portfolio title: #{portfolio_item}",
@@ -21,7 +31,7 @@ puts '5 skills created'
         thumb_image: "http://placehold.it/350x200"
       )
 end
-puts '9 portfolio items created'
+
 1.times do |portfolio_item|
     Portfolio.create!(
         title: "Portfolio title: #{portfolio_item}",
@@ -31,11 +41,5 @@ puts '9 portfolio items created'
         thumb_image: "http://placehold.it/350x200"
       )
 end
-3.time do |topic|
-  Topic.create!(
-    title: "Topic #{topic}",
-    body: "So you are basically a retard but that's alright",
-    topic_id: Topic.last.id
-  )
-end
-puts "3 Topic created"
+
+puts '9 portfolio items created'
