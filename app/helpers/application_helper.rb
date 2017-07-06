@@ -16,3 +16,7 @@ module ApplicationHelper
     end
   end
 end
+
+def copyright_generator
+  CahoonViewTool::Renderer.copyright 'Jacob Cahoon', 'All rights reserved'
+end
