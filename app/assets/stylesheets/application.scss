@@ -239,3 +239,17 @@ body {
 .app-card-container a {
   color: green;
 }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid grey;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
