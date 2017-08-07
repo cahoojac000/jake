@@ -51,17 +51,7 @@ puts '5 skills created'
       )
 end
 
-1.times do |portfolio_item|
-    Portfolio.create!(
-        title: "Portfolio title: #{portfolio_item}",
-        subtitle: "Angular",
-        body: 'Tail burgdoggen ribeye landjaeger turkey. Shankle tenderloin shank kielbasa brisket, sausage tail doner ham short loin alcatra hamburger. Chicken pig brisket turkey beef short loin pork loin, andouille frankfurter corned beef venison. Kielbasa corned beef prosciutto pastrami meatloaf short loin kevin. Drumstick ball tip pig tongue rump. Tongue burgdoggen ham brisket, pork chop meatball jowl cow boudin.',
-        main_image: "http://placehold.it/600x400",
-        thumb_image: "http://placehold.it/350x200"
-      )
-end
-
-puts '9 portfolio items created'
+puts '8 portfolio items created'
 
 3.times do |technology|
   Portfolio.last.technologies.create!(
