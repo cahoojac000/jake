@@ -2,10 +2,26 @@
   <div class="card">
     <h1>Here's a Lil Bit About Moi</h1>
       <hr>
-      <div class="row">
-        <div class='col-md-4'>
-          <%= image_tag "profile.jpg", width: 300, alt: "oh shiz, this shoulda worked", class: 'profile-img' %>
+          <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "profile.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
         </div>
+      </div>
         <div class='col-md-8'>
           <p>Every morning I wake up at 6 AM to go to soccer practice. After that I road bike 15 miles to a miserable coding camp. After that I bike 3 miles to work. Finally at the end of the day I bike 15 miles back home. By then it's 5 PM and the day is wasted.</p>
           <p>
